@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>数组去重</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var a = [];
+			var arrData = [1,3,5,7,7,8,9,3,10,8];
+			document.write("排重前："+arrData)
+			 function uniqueArray(data){   
+				 //用for循环遍历原数组 
+				for (var i=0; i<data.length; i++) { 
+					//找到第一次出现的元素，追加到a中
+					if (a.indexOf(data[i])<0){  
+						a.push(data[i]); 
+					}  
+				} 
+				//返回a
+				return a;
+			}  
+			
+			var arr=uniqueArray(arrData);
+			document.write("排重后："+arr);
+			
+             
+		</script>
+	</body>
+</html>
